@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordable Travel - 实惠旅游</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #E75480;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .section {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+    .package, .cruise, .tour {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.package:hover, 
+.cruise:hover, 
+.tour:hover {
+    transform: scale(1.05);
+}
+        .preview {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 100;
+    overflow: hidden;
+}
+      .preview {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.package:hover .preview, 
+.cruise:hover .preview, 
+.tour:hover .preview {
+    opacity: 1;
+}
+        .package:hover .preview, .cruise:hover .preview, .tour:hover .preview {
+            display: block;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }#chatButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#chatButton:hover {
+    background-color: #ff8c00;
+    transform: scale(1.1);
+}
+ .iframe-wrapper {
+        display: flex;
+        justify-content: center;  /* Centers the iframe horizontally */
+        align-items: center;  /* Centers it vertically (optional) */
+        width: 100vw;  /* Full width of viewport */
+        height: 80vh;  /* Adjust as needed */
+        overflow-x: auto;  /* Enables horizontal scrolling */
+        overflow-y: hidden;  /* Prevents vertical scrolling */
+        padding: 10px 0;  /* Optional padding */
+    }
+
+    /* The iframe container to control sizing */
+    .iframe-container {
+        display: block;
+        width: 90%;  /* Adjust width as needed */
+        max-width: 1200px;  /* Ensures it doesn't stretch too wide */
+        height: 600px;  /* Adjust height as needed */
+        border: none; /* Removes border */
+    }
+
+    /* Styles for the iframe itself */
+    .drive-folder {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;  /* Optional rounded corners */
+    }
+
+
+    </style>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        欢迎您使用实惠旅游，若您有任何感兴趣的套餐可以立马点击右下角询问细节！
+    </header>
+<div class="iframe-wrapper">
+    <div class="iframe-container">
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1A58y8FJ7j1wCzlwc-uM9gC7HvJCT2N_R&usp=sharing#grid" 
+                class="drive-folder"></iframe>
+    </div>
+</div> 
+    <div class="section" id="packages">
+        <h2>旅游套餐</h2>
+        <div class="package">
+            坎昆全包套餐
+            <div class="preview">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.UKveW3bFvfrxOD4bGPiJTwHaHa&pid=Api" alt="坎昆度假村">
+                包括往返机票和全包式度假村住宿，让您在加勒比海的美丽海滩上尽情放松。
+            </div>
+        </div>
+      
+        </div>
+        <div class="package">
+            黄石公园深度游
+            <div class="preview">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.GxGHuwC_Qj_hXXodX_qUlgHaFj&pid=Api" alt="黄石公园">
+                适合大自然爱好者的巴士旅行，探索黄石公园令人惊叹的风景，配有专业导游。
+            </div>
+        </div>
+  <div class="package">
+        Exoticca旅游：秘鲁马丘比丘探险之旅
+        <div class="preview">
+            <img src="https://www.incatrailmachu.com/img/machu-picchu-02-011.jpg"秘鲁马丘比丘探险">
+            探索神秘的古印加文明，参观马丘比丘遗址，体验高原风情与古代遗迹的魅力。
+        </div>
+    </div>
+    <div class="package">
+        Exoticca旅游：巴西亚马逊雨林探险之旅
+        <div class="preview">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/mata-atlantica-atlantic-forest-in-brazil-royalty-free-image-1668724621.jpg?resize=1200:*" alt="巴西亚马逊探险">
+            深入原始亚马逊雨林，体验丰富的野生动植物和独特的生态环境。
+        </div>
+    </div>
+    <div class="package">
+        Exoticca旅游：哥伦比亚咖啡之旅
+        <div class="preview">
+            <img src="https://www.exoticca.com/_next/image?url=https%3A%2F%2Fstatic-ca.exoticca.com%2Fimg%2Fp%2F17820%2F363270.jpg&w=3840&q=75" alt="哥伦比亚咖啡之旅">
+            走进咖啡种植园，品尝世界著名的哥伦比亚咖啡，深入体验当地浓厚的文化氛围。
+        </div>
+    </div>
+<div class="package">
+        Exoticca 旅游：埃及尼罗河巡航之旅
+        <div class="preview">
+            <img src="https://static-us.exoticca.com/img/p/10196/240067.jpg">
+            乘坐豪华游轮沿尼罗河航行，探索古埃及的金字塔、神庙和陵墓，感受古老文明的辉煌。
+        </div>
+    </div>
+
+    <div class="package">
+        Exoticca 旅游：日本樱花季深度游
+        <div class="preview">
+            <img src="https://www.exoticca.com/_next/image?url=https%3A%2F%2Fstatic-ca.exoticca.com%2Fimg%2Fp%2F18109%2F369414_m.jpg&w=1920&q=75" alt="日本樱花季">
+            在樱花盛开的季节，游览东京、京都、大阪等地，体验日本独特的文化和美食。
+        </div>
+    </div>
+
+    <div class="package">
+        Exoticca 旅游：南非野生动物园探险
+        <div class="preview">
+            <img src="https://www.exoticca.com/_next/image?url=https%3A%2F%2Fuploads.exoticca.com%2Fglobal%2Fdestination%2Fpoi%2Faquila-private-game-reserve.png&w=3840&q=75">
+            前往克鲁格国家公园，近距离观察非洲五霸，体验惊险刺激的野生动物之旅。
+        </div>
+    </div>
+
+    <div class="package">
+        Exoticca 旅游：意大利美食与文化之旅
+        <div class="preview">
+            <img src="https://www.exoticca.com/_next/image?url=https%3A%2F%2Fuploads.exoticca.com%2Fglobal%2Fdestination%2Fpoi%2Fpositano.png&w=3840&q=75">
+            探索罗马、佛罗伦萨、威尼斯等历史名城，品尝正宗意大利美食，感受文艺复兴的艺术魅力。
+        </div>
+    </div>
+
+    <div class="package">
+        Exoticca 旅游：澳大利亚大堡礁潜水之旅
+        <div class="preview">
+            <img src="https://www.exoticca.com/_next/image?url=https%3A%2F%2Fuploads.exoticca.com%2Fglobal%2Fdestination%2Fpoi%2Fgreat-barrier-reef.png&w=3840&q=75" alt="澳大利亚大堡礁潜水">
+            前往世界最大的珊瑚礁群，体验五彩斑斓的海底世界，感受潜水的乐趣。
+        </div>
+    </div>
+
+    <div class="package">
+        Exoticca 旅游：冰岛极光之旅
+        <div class="preview">
+            <img src="https://uploads.exoticca.com/global/destination/poi/jokulsarlon-glacier-lagoon.png" alt="冰岛极光">
+            在冰岛的漫长冬夜，观赏绚丽多彩的北极光，体验冰川、温泉和火山的奇妙景观。
+        </div>
+    </div>
+    <div class="package">
+        Exoticca 旅游：新西兰自驾探险之旅
+        <div class="preview">
+            <img src="https://www.exoticca.com/_next/image?url=https%3A%2F%2Fuploads.exoticca.com%2Fglobal%2Fdestination%2Fpoi%2Fqueenstown.png&w=3840&q=75" alt="新西兰自驾探险">
+            驾车穿越新西兰北岛和南岛，欣赏壮丽的自然风光，体验毛利文化和极限运动的刺激。
+        </div>
+    </div>
+
+    <div class="package">
+        Exoticca 旅游：希腊爱琴海岛屿之旅
+        <div class="preview">
+            <img src="https://uploads.exoticca.com/p/19105/61718/i/i4_d.jpg" alt="希腊爱琴海岛屿">
+            游览圣托里尼、米科诺斯等美丽岛屿，享受浪漫的蓝白风情和迷人的海滩风光。
+        </div>
+    </div>
+    <div class="section" id="cruiselines">
+        <h2>邮轮航线</h2>
+        
+        <div class="cruise">
+            皇家加勒比 - 海洋奇迹号
+            <div class="preview">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.rqjXUz6RI9925HqV31ilqAHaEW&pid=Api" alt="海洋奇迹号">
+                这艘豪华邮轮提供顶级娱乐和美食选择，适合高端游客。
+            </div>
+        </div>
+        <div class="cruise">
+            地中海邮轮
+            <div class="preview">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.7WPUy6HKMo2TiUOs0RijpAHaFj&pid=Api" alt="地中海邮轮">
+                体验意大利风格的豪华邮轮，畅游地中海沿岸迷人城市。
+                   </div>
+                </div>
+            </div>
+          <div class="package">
+            公主邮轮：阿拉斯加航线
+            <div class="preview">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.xbqZvp-nqtMEjexnd1dhuwHaEp&pid=Api" alt="欧洲经典豪华巴士团">
+                公主邮轮提供前往阿拉斯加的独特航线，让您近距离欣赏壮丽的冰川和丰富的野生动物。
+            </div>
+        </div>
+    </div>
+  <div class="section" id="buslines">
+        <h2>陆巴旅游套餐</h2>
+    <div class="section" id="packages">
+    <div class="package">
+        加拿大东海岸 3 日游
+        <div class="preview">
+            <img src="https://entiretravel.imgix.net/getmedia/b9ee3ba7-5e59-4530-8c02-7d438450ab7e/image-(4).png?auto=format">
+            体验东部加拿大的经典之旅，探索大西洋沿岸的美丽风光。
+        </div>
+    </div>
+
+    <div class="package">
+        落基山脉 5 日深度游
+        <div class="preview">
+            <img src="https://dynamic-media.tacdn.com/media/photo-o/2f/0e/cb/c2/caption.jpg?w=1400&h=1000&s=1">
+            深入加拿大落基山脉，欣赏班夫、贾斯珀与约霍国家公园的壮丽景观。
+        </div>
+    </div>
+
+    <div class="package">
+        【巴士团 + 邮轮】巴哈马圣诞 & 新年假期
+        <div class="preview">
+            <img src="https://blog.familyfunatlantis.com/wp-content/uploads/49071acddb2c3cab656fef570e659932.jpg">
+            结合陆地游与邮轮体验，在巴哈马享受节日假期的欢乐氛围。
+        </div>
+    </div>
+
+    <div class="package">
+        美国东海岸 5 日游
+        <div class="preview">
+            <img src="https://www.tripsavvy.com/thmb/MlAVE9PdAhhO3gXTaivg5Ty9GYI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Statue-liberty-56b008a15f9b58b7d01f9e4e.jpg">
+            畅游美国东海岸，体验多元化的城市风光与历史文化。
+        </div>
+    </div>
+
+    <div class="package">
+        尼亚加拉大瀑布一日游
+        <div class="preview">
+            <img src="https://cdn.britannica.com/30/94430-050-D0FC51CD/Niagara-Falls.jpg">
+            快速体验尼亚加拉大瀑布的壮观景致，适合短途游览。
+        </div>
+    </div>
+
+</div>
+
+    
+    <div class="section" id="tourlines">
+        <h2> 欧洲旅游线路</h2>
+        <div class="tour">
+            红线「西欧经典」7天
+            <div class="preview">
+                <img src="https://d3hv8kxfi6k0xa.cloudfront.net/craft/_lineSmall2x/Red2023.jpg" alt="西欧经典">
+                途经德国、荷兰、比利时、法国和卢森堡，适合初次欧洲旅行者。
+            </div>
+        </div>
+        <div class="tour">
+            蓝线「东欧璀璨」7天
+            <div class="preview">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.LrVz53Jmjs3ZgDajCOnSkAHaFL&pid=Api" alt="东欧璀璨">
+                涵盖德国、瑞士、捷克、匈牙利、奥地利、斯洛伐克和列支敦士登。
+            </div>
+        </div>
+        <div class="tour">
+            绿线「南法意式」7天
+            <div class="preview">
+                <img src="https://d3hv8kxfi6k0xa.cloudfront.net/craft/_lineSmall2x/green2023.jpg" alt="南法意式">
+                游览瑞士、意大利、梵蒂冈、摩纳哥和法国南部，感受丰富历史文化。
+            </div>
+        </div>
+        <div class="tour">
+        黄线「热情西葡」7天
+        <div class="preview">
+            <img src="https://d3hv8kxfi6k0xa.cloudfront.net/craft/_lineSmall2x/yellow2023.jpg">
+            深入西班牙和葡萄牙，感受南欧的热情与活力。
+            </div>
+        </div>
+    <div class="tour">
+        粉线「北欧冰川峡湾」7天
+        <div class="preview">
+            <img src="https://d3hv8kxfi6k0xa.cloudfront.net/craft/_lineSmall2x/pink2023.jpg">
+            深入北欧三国（丹麦、瑞典、挪威），欣赏冰川与峡湾的壮丽景观。
+        </div>
+    </div>
+      <div class="tour">
+    紫线「英伦贵族」7天
+    <div class="preview">
+        <img src="https://d3hv8kxfi6k0xa.cloudfront.net/craft/_lineSmall2x/pur-A2023.jpg" alt="英伦贵族">
+        探索英国、英格兰和苏格兰，包括伦敦、爱丁堡和尼斯湖，体验英国皇室与古堡文化。
+    </div>
+</div>
+<div class="tour">
+    银线「中欧探索」7天
+    <div class="preview">
+        <img src="https://d3hv8kxfi6k0xa.cloudfront.net/craft/_lineSmall2x/silver_banner.jpg">
+        探索捷克、德国和波兰的历史与文化，参观柏林墙、神秘的盐矿，并漫步于童话般的城镇。
+    </div>
+</div>
+<div class="tour">
+    橙线「圣地之旅」7天
+    <div class="preview">
+        <img src="https://d3hv8kxfi6k0xa.cloudfront.net/craft/_lineSmall2x/orange-2023.jpg">
+        <p>探索法国、西班牙和安道尔的迷人风光，感受多元文化的融合与历史遗迹的魅力。</p>
+    </div>
+
+
+
+      
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    let items = document.querySelectorAll(".package, .cruise, .tour");
+    items.forEach(item => {
+        item.addEventListener("click", function() {
+            // Close other previews
+            items.forEach(el => {
+                if (el !== item) el.classList.remove("active");
+            });
+
+            // Toggle this one
+            this.classList.toggle("active");
+        });
+    });
+});
+</script>
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+	    <link rel="stylesheet" href="styles.css">
+
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+    webhookUrl: 'https://zhentingle.app.n8n.cloud/webhook/a99be711-b57e-4409-8506-7d21ac589990/chat',
+    webhookConfig: {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_API_KEY'
+        }
+    },
+    target: '#n8n-chat',
+    mode: 'window',
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
+    metadata: {},
+    showWelcomeScreen: false,
+    defaultLanguage: 'zh',
+    initialMessages: [
+        '您好！👋',
+        '我是熊熊，有什么可以帮助您的吗？'
+    ],
+    i18n: {
+        zh: {
+            title: '您好！👋',
+            subtitle: "开始聊天。我们24小时为您提供帮助。",
+            footer: '',
+            getStarted: '新的对话',
+            inputPlaceholder: '输入您的问题...',
+        }
+    }
+});
+
+</script>
+</body>
+</html>
