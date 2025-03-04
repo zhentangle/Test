@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Li - AI Service Pricing">
+    <title>Service Pricing | John Li</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #000;
+            text-align: center;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+        }
+        .tier, .contact-container {
+            width: 30%;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+            overflow: hidden;
+            cursor: pointer;
+            min-height: 50px;
+        }
+        .tier h2, .contact-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .tier p, .contact-container p {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tier:hover, .contact-container:hover {
+            background: #fff;
+            color: #000;
+        }
+        .tier:hover p, .contact-container:hover p {
+            opacity: 1;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .contact-container {
+            text-align: center;
+        }
+        .return-button {
+            position: fixed;
+            top: 20%;
+            left: 0;
+            width: 120px;
+            height: 240px;
+            background: black;
+            color: white;
+            border-top-right-radius: 120px;
+            border-bottom-right-radius: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0;
+            transition: background 0.3s, opacity 0.3s, color 0.3s, background-image 0.3s;
+        }
+        .return-button:hover {
+            background: white;
+            color: black;
+            opacity: 1;
+            background-image: 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pricing</h1>
+    
+    <div class="pricing-container">
+        <div class="tier">
+            <h2>TIER 1</h2>
+            <P><strong>"PERSONAL/SMALL BUSINESS"</strong></P>
+            <p>Includes chatbot creation and deployment into an existing website.</p>
+            <p><strong>Examples:</strong> Basic customer service AI</p>
+            <p><strong>Cost:</strong> $1000 setup + $60/month maintenance</p>
+            <p><strong>Maintainance Fees:</strong> $20 - $???/month per API or integration</p>
+        </div>
+
+        <div class="tier">
+            <h2>TIER 2</h2>
+            <p><strong>"ENTERPRISE"</strong></p>
+            <p>RAG (Retrieval-Augmented Generation) integration</p>
+            <p>Automated database updates every minute</p>
+            <p><strong>Examples:</strong> AI project manager assistant or scheduling assistant (emails, scheduling, file updates, Q&A)</p>
+            <p><strong>Base Price:</strong> $5000 + $300/month maintenance</p>
+            <p><strong>Maintainance Fees:</strong> $20 - $???/month per API or integration</p>
+            <p><strong>Custom Business Integration:</strong> $1000/Integration</p>
+        </div>
+
+        <div class="tier">
+            <h2>TIER 3</h2>
+            <P><strong>"FULL STACK"</strong></P>
+            <p>Tell me your dream and vision, and I will make it happen.</p>
+            <p>Custom AI development from front to back, tailored to your business or personal needs.</p>
+            <p><strong>Contact me for pricing.</strong></p>
+        </div>
+    </div>
+
+    <div class="pricing-container">
+        <div class="contact-container">
+            <h2>Free Consultations</h2>
+            <p>Email: <a href="mailto:zhentingle@hotmail.com" style="color: inherit;">Zhentingle@hotmail.com</a></p>
+            <p>Phone: <a href="tel:2367888676" style="color: inherit;">236-788-8676</a></p>
+        </div>
+    </div>
+    
+    <div class="return-button" onclick="window.location.href='index.html'"></div>
+</body>
+</html>
